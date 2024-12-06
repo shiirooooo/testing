@@ -2,11 +2,11 @@
     $title = "SOUTHSIDE";
     $menuItems = [
         "Home" => "index.php",
-        "Portofolio" => "portofolio.php",
-        "Social" => "social.php",
-        "Project" => "project.php",
+        "Part" => "part.php",
+        "Project" => "dasboard.php",
         "Music" => "music.php"
     ];
+    $members = ["Dylan", "Taofik", "Geo", "Hafiz", "Hasan", "Azzam"];
 ?>
 
 <!DOCTYPE html>
@@ -22,15 +22,23 @@
     <body>
         <div class="banner">
             <div class="navbar">
-                <img src="logo2.png" class="logo" alt="Logo">
+                <img src="image/logo2.png" class="logo" alt="Logo">
                 <ul>
                     <?php foreach ($menuItems as $menuName => $menuLink): ?>
                         <li><a href="<?php echo $menuLink; ?>"><?php echo $menuName; ?></a></li>
                     <?php endforeach; ?>
                 </ul>
             </div>
-            <div class="contscoial">
-                <!-- Konten sosial bisa ditambahkan di sini -->
+            <div class="content">
+                <h1>Our Team</h1>
+                <div class="members">
+                    <?php foreach ($members as $member): ?>
+                        <div class="member-card">
+                            <div class="card-image"></div>
+                            <h2><?php echo $member; ?></h2>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
         </div>
     </body>

@@ -10,31 +10,43 @@ body {
     color: #ffffff;
 }
 
-/* Navbar styling */
+/* Banner and Navbar styling */
+.banner {
+    width: 100%;
+    height: auto;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+}
+
 .navbar {
+    width: 85%;
+    margin: auto;
+    padding: 25px 0; /* Mengurangi padding */
     display: flex;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 200px; /* Ukuran logo diperkecil */
+    height: 70px;
+    cursor: pointer;
 }
 
 .navbar ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    gap: 20px;
+    gap: 15px; /* Jarak antar menu diperkecil */
+    margin: 0;
+    padding: 0;
 }
 
 .navbar ul li a {
     text-decoration: none;
     color: #ffffff;
-    font-weight: 400;
-    font-size: 14px;
-    padding: 8px 15px;
+    font-size: 12px; /* Ukuran font diperkecil */
+    padding: 6px 12px; /* Padding tombol diperkecil */
+    text-transform: uppercase;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -46,7 +58,7 @@ body {
 
 /* Information section styling */
 .information-section {
-    padding: 50px 7%;
+    padding: 40px 5%; /* Padding diperkecil */
     text-align: center;
 }
 
@@ -54,44 +66,44 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 15px; /* Jarak antar komponen diperkecil */
 }
 
 .component {
     background: rgba(255, 255, 255, 0.1); /* Transparent card background */
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    padding: 20px;
-    width: 250px;
+    border-radius: 8px; /* Border radius diperkecil */
+    padding: 15px; /* Padding dalam komponen diperkecil */
+    width: 200px; /* Ukuran lebar komponen diperkecil */
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4); /* Shadow lebih halus */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     color: #ffffff;
 }
 
 .component img {
-    width: 100%;
+    width: 90%; /* Gambar lebih kecil */
     height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
+    border-radius: 8px; /* Menyesuaikan dengan border radius komponen */
+    margin-bottom: 10px; /* Jarak bawah gambar diperkecil */
 }
 
 .component h3 {
-    margin: 10px 0 5px;
-    font-size: 18px;
+    margin: 8px 0 4px; /* Margin diperkecil */
+    font-size: 16px; /* Ukuran font diperkecil */
     font-weight: 600;
     color: #ffffff;
 }
 
 .component p {
-    font-size: 14px;
-    color: #cccccc; /* Light grey text for better readability */
-    line-height: 1.6;
+    font-size: 12px; /* Ukuran font diperkecil */
+    color: #cccccc; /* Light grey text untuk readability */
+    line-height: 1.4; /* Line-height lebih kecil */
 }
 
 .component:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
+    transform: scale(1.03); /* Zoom lebih kecil saat hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5); /* Shadow lebih halus */
 }
 
 /* Footer styling */
@@ -99,7 +111,7 @@ body {
     background-color: rgba(0, 0, 0, 0.9);
     color: #ffffff;
     text-align: center;
-    padding: 15px 0;
-    font-size: 14px;
-    margin-top: 50px;
+    padding: 10px 0; /* Padding footer diperkecil */
+    font-size: 12px; /* Ukuran font diperkecil */
+    margin-top: 40px; /* Jarak atas footer diperkecil */
 }

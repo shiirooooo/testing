@@ -9,12 +9,15 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.php">HOME</a></li>
-            <li><a href="part.php" class="active">PART</a></li>
-        </ul>
-    </nav>
+    <div class="banner">
+        <div class="navbar">
+            <img src="image/logo2.png" class="logo" alt="Logo">
+            <ul>
+                <li><a href="index.php">HOME</a></li>
+                <li><a href="part.php" class="active">PART</a></li>
+            </ul>
+        </div>
+    </div>
 
     <!-- Information Section -->
     <section class="information-section">
@@ -44,9 +47,5 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Water Level Monitoring. All rights reserved.</p>
-    </footer>
 </body>
 </html>
