@@ -13,11 +13,11 @@
     <body>
         <div class="banner">
             <div class="navbar">
-                <img src="logo2.png" class="logo" alt="Logo">
+                <img src="/image/logo2.png" class="logo" alt="Logo">
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="portofolio.php">Portofolio</a></li>
-                    <li><a href="project.php">Project</a></li>
+                    <li><a href="part.php">Part</a></li>
+                    <li><a href="dasboard.php">Project</a></li>
                     <li><a href="music.php">Music</a></li>
                 </ul>
             </div>

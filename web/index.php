@@ -13,11 +13,11 @@
     <body>
         <div class="banner">
             <div class="navbar">
-                <img src="logo2.png" class="logo" alt="Logo">
+                <img src="image\logo2.png" class="logo" alt="Logo">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="part.php">Part</a></li>
-                    <li><a href="project.php">Project</a></li>
+                    <li><a href="dasboard.php">Project</a></li>
                     <li><a href="music.php">Music</a></li>
                 </ul>
             </div>
@@ -29,7 +29,9 @@
                     <a href="anggota.php">
                         <button type="button"><span></span>ANGGOTA</button>
                     </a>
-                    <button type="button"><span></span>DESKRIPSI</button>
+                    <a href="deskripsi.php">
+                        <button type="button"><span></span>DESKRIPSI</button>
+                    </a>
                  </div>
             </div>
         </div>

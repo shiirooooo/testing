@@ -22,7 +22,7 @@
     <body>
         <div class="banner">
             <div class="navbar">
-                <img src="logo2.png" class="logo" alt="Logo">
+                <img src="image/logo2.png" class="logo" alt="Logo">
                 <ul>
                     <?php foreach ($menuItems as $menuName => $menuLink): ?>
                         <li><a href="<?php echo $menuLink; ?>"><?php echo $menuName; ?></a></li>
