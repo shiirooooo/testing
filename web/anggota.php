@@ -4,7 +4,6 @@
         "Home" => "index.php",
         "Part" => "part.php",
         "Project" => "dasboard.php",
-        "Music" => "music.php"
     ];
     $members = ["Dylan", "Taofik", "Geo", "Hafiz", "Hasan", "Azzam"];
 ?>

@@ -18,7 +18,6 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="part.php">Part</a></li>
                     <li><a href="dasboard.php">Project</a></li>
-                    <li><a href="music.php">Music</a></li>
                 </ul>
             </div>
 

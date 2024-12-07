@@ -2,10 +2,8 @@
     $title = "SOUTHSIDE";
     $menuItems = [
         "Home" => "index.php",
-        "Portofolio" => "portofolio.php",
-        "Social" => "social.php",
-        "Project" => "project.php",
-        "Music" => "music.php"
+        "Part" => "part.php",
+        "Project" => "dasboard.php",
     ];
 ?>
 
