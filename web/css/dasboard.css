@@ -1,0 +1,197 @@
+/* General body and background styling */
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('backgorund.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container styling for the dashboard */
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Dashboard header */
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1, h3 {
+    font-size: 36px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+/* Row layout adjustments for a neat two-column design */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* General card styling */
+.card {
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: white;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.card-body {
+    text-align: center;
+    padding: 25px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Specific background colors for different types of cards */
+.card.bg-primary {
+    background: linear-gradient(135deg, #4a90e2, #2c3e50); /* Elegant blue */
+    border: 1px solid #4a90e2;
+}
+
+.card.bg-success {
+    background: linear-gradient(135deg, #6dd5ed, #28a745); /* Soft green */
+    border: 1px solid #28a745;
+}
+
+.card.bg-warning {
+    background: linear-gradient(135deg, #f9d423, #ffb347); /* Elegant yellow */
+    border: 1px solid #f9d423;
+}
+
+.card.bg-danger {
+    background: linear-gradient(135deg, #e74c3c, #b33939); /* Premium red */
+    border: 1px solid #e74c3c;
+}
+
+.card.bg-info {
+    background: linear-gradient(135deg, #48c6ef, #6f86d6); /* Subtle cyan-blue */
+    border: 1px solid #48c6ef;
+}
+
+/* Glow effect for icons */
+.card i {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Chart container styling */
+.chart-container {
+    margin: 30px 0;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    max-height: 400px;
+    overflow: hidden;
+}
+
+/* Button styling */
+.btn-custom {
+    background: linear-gradient(135deg, #4a90e2, #34495e); /* Subtle blue gradient */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.btn-custom:hover {
+    background: linear-gradient(135deg, #34495e, #4a90e2);
+}
+
+/* Styling for the back button */
+.back-btn a {
+    font-size: 20px;
+    color: white;
+    padding: 10px 25px;
+    background-color: #333;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.back-btn a:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
+/* Ensure proper spacing and alignment of the dashboard content */
+.row .col-md-6 {
+    margin-bottom: 20px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1, h3 {
+        font-size: 28px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-text {
+        font-size: 16px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col-md-6 {
+        width: 100%;
+    }
+
+    .chart-container {
+        max-height: 300px;
+    }
+}
+

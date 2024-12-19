@@ -1,0 +1,254 @@
+/* General body and background styling */
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('backgorund.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Banner Section - Main container */
+.banner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Navbar - Positioning fixed to the top */
+.navbar {
+    width: 100%;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
+}
+
+/* Logo styling */
+.logo {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    margin-left: 20px; /* Adds space from the left edge */
+}
+
+/* Navbar menu styling */
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin-right: 20px; /* Adds space from the right edge */
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: #00bfae;
+    transform: translateY(-5px);
+}
+
+/* Hover line effect */
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+/* Content Section - Deskripsi */
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent white background */
+    border-radius: 15px;
+    max-width: 80%;
+    margin-top: 50px;
+    backdrop-filter: blur(10px); /* Adds glass effect */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Softer shadow for a brighter effect */
+}
+
+/* Content Title */
+.content h1 {
+    font-size: 45px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Content text */
+.content p {
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    text-align: justify; /* Justify the text */
+}
+
+/* Card Styling - Glassmorphism Effect (with lighter transparency) */
+.card {
+    background: rgba(255, 255, 255, 0.15); /* More transparent white background */
+    backdrop-filter: blur(15px); /* Adds blur effect */
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Softer shadow for a lighter effect */
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2); /* Softer hover shadow */
+}
+
+/* Card Titles */
+.card-title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* Buttons - Glassmorphism with transparency */
+button {
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    backdrop-filter: blur(5px);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button span {
+    background: #00bfae;
+    height: 100%;
+    width: 0;
+    border-radius: 30px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: width 0.4s ease;
+}
+
+button:hover {
+    transform: translateY(-5px);
+}
+
+button:hover span {
+    width: 100%;
+}
+
+/* Card Colors */
+.card.bg-primary {
+    background: rgba(74, 144, 226, 0.15); /* Elegant blue with more transparency */
+    border: 2px solid #4a90e2;
+}
+
+.card.bg-success {
+    background: rgba(45, 201, 129, 0.15); /* Soft green with more transparency */
+    border: 2px solid #28a745;
+}
+
+.card.bg-warning {
+    background: rgba(255, 182, 74, 0.15); /* Elegant yellow with more transparency */
+    border: 2px solid #f9d423;
+}
+
+.card.bg-danger {
+    background: rgba(231, 76, 60, 0.15); /* Premium red with more transparency */
+    border: 2px solid #e74c3c;
+}
+
+.card.bg-info {
+    background: rgba(72, 198, 239, 0.15); /* Subtle cyan-blue with more transparency */
+    border: 2px solid #48c6ef;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .card-text {
+        font-size: 16px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col-md-6 {
+        width: 100%;
+    }
+}
