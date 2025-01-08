@@ -73,7 +73,6 @@ const waterTurbidityChart = new Chart(ctxTurbidity, {
 });
 
 // Fungsi untuk mengambil data dari API
-// Fungsi untuk mengambil data dari API
 function fetchDataFromApi() {
     fetch(apiUrl)
         .then(response => {
@@ -220,4 +219,108 @@ document.addEventListener("DOMContentLoaded", () => {
     // Insert the wrapper into the container
     container.style.position = "relative";
     container.appendChild(topRightButtons);
+});
+
+// Tambahkan elemen tabel di bawah grafik turbidity pada HTML
+const chartContainer = document.querySelector('.chart-container');
+
+// Buat container untuk tabel
+const tableContainer = document.createElement('div');
+tableContainer.classList.add('table-container');
+tableContainer.style.marginTop = "20px";
+tableContainer.style.overflowX = "auto";
+tableContainer.style.background = "rgba(255, 255, 255, 0.1)";
+tableContainer.style.padding = "15px";
+tableContainer.style.borderRadius = "15px";
+tableContainer.style.backdropFilter = "blur(5px)";
+
+// Tambahkan tabel ke dalam container
+const table = document.createElement('table');
+table.style.width = "100%";
+table.style.borderCollapse = "collapse";
+table.style.color = "white";
+table.style.textAlign = "center";
+table.innerHTML = `
+    <thead>
+        <tr>
+            <th style="border-bottom: 2px solid white; padding: 10px;">Time</th>
+            <th style="border-bottom: 2px solid white; padding: 10px;">Water Height (cm)</th>
+            <th style="border-bottom: 2px solid white; padding: 10px;">Water Turbidity (NTU)</th>
+        </tr>
+    </thead>
+    <tbody id="data-table-body"></tbody>
+`;
+tableContainer.appendChild(table);
+chartContainer.parentElement.appendChild(tableContainer);
+
+// Fungsi untuk mengambil data dari API dan memperbarui tabel
+function updateTable() {
+    const tableBody = document.getElementById('data-table-body');
+    tableBody.innerHTML = ""; // Kosongkan tabel sebelum menambahkan data baru
+
+    // Mengambil data dari API
+    fetch("https://watertankmonitoring.my.id/WaterMonitoring/get_recent_data.php?limit=10")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json(); // Parse JSON dari API
+        })
+        .then(data => {
+            // Pastikan data valid
+            if (Array.isArray(data) && data.length > 0) {
+                data.forEach(item => {
+                    // Membuat baris baru untuk setiap data
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td style="padding: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.2);">${item.ts}</td>
+                        <td style="padding: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.2);">${item.waterLevel} cm</td>
+                        <td style="padding: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.2);">${item.turbidityNtu} NTU</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            } else {
+                console.error("Data API tidak valid atau kosong.");
+            }
+        })
+        .catch(error => {
+            console.error("Error fetching data from API: ", error);
+        });
+}
+
+// Panggil updateTable saat halaman dimuat untuk pertama kali
+document.addEventListener('DOMContentLoaded', updateTable);
+
+// Menambahkan tombol Download PDF dengan ikon di sebelah tulisan
+const downloadPdfButton = document.createElement("button");
+downloadPdfButton.textContent = " Download Data as PDF";
+
+// Menambahkan ikon di sebelah tulisan menggunakan Font Awesome
+const pdfIcon = document.createElement("i");
+pdfIcon.classList.add("fas", "fa-file-pdf");  // Menambahkan kelas Font Awesome untuk ikon PDF
+pdfIcon.style.marginRight = "8px";  // Memberikan jarak antara ikon dan tulisan
+
+downloadPdfButton.classList.add("btn", "btn-primary");
+downloadPdfButton.style.marginTop = "20px"; // Menambahkan margin atas
+
+// Menambahkan ikon dan teks ke dalam tombol
+downloadPdfButton.prepend(pdfIcon);
+
+// Menambahkan tombol setelah tabel
+tableContainer.appendChild(downloadPdfButton);
+;
+
+// Event listener untuk tombol download PDF
+downloadPdfButton.addEventListener("click", function () {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    // Ambil tabel yang ada di halaman
+    const table = document.querySelector("table");
+
+    // Mengonversi tabel menjadi PDF
+    doc.autoTable({ html: table });
+
+    // Menyimpan PDF dengan nama 'water_tank_data.pdf'
+    doc.save("water_tank_data.pdf");
 });

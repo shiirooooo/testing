@@ -33,6 +33,9 @@
                 <p>Ketika level air terdeteksi rendah, sistem secara otomatis mengaktifkan pompa untuk mengisi air ke dalam toren hingga mencapai kapasitas yang diinginkan, menjaga ketersediaan air yang optimal. Semua data ini terhubung ke aplikasi mobile dan website yang memanfaatkan MQTT untuk transmisi data secara real-time, memastikan pemantauan yang terus menerus dan efisien.</p>
                 <p>Sistem ini juga dilengkapi dengan API yang dihosting untuk menyajikan data analitik penting, seperti level air maksimum, minimum, dan rata-rata, serta tingkat kekeruhan air (turbidity). Dengan demikian, pengguna dapat memantau kondisi toren secara lebih komprehensif dan mengambil tindakan yang tepat berdasarkan data yang dihasilkan.</p>
                 <p>Solusi ini ideal untuk pemantauan toren air pada berbagai skala, baik di rumah, gedung perkantoran, maupun fasilitas industri, yang membutuhkan sistem pemantauan air yang cerdas, otomatis, dan terintegrasi dengan teknologi IoT.</p>
+
+                <!-- Add Image Poster below the description -->
+                <img src="image/poster.png" alt="Water Tank Poster" class="poster-image">
             </div>
         </div>
     </body>

@@ -252,3 +252,34 @@ button:hover span {
         width: 100%;
     }
 }
+
+/* Styling for the poster image */
+.poster-image {
+    width: 100%; /* Memastikan gambar mengambil 100% dari lebar kontainer */
+    max-width: 1100px; /* Membesarkan batas lebar gambar */
+    max-height: 1000px; /* Membesarkan batas tinggi gambar */
+    margin-top: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain; /* Menjaga rasio aspek gambar */
+}
+
+/* Ensures that the content container scrolls when needed */
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent white background */
+    border-radius: 15px;
+    max-width: 80%;
+    margin-top: 50px;
+    backdrop-filter: blur(10px); /* Adds glass effect */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Softer shadow for a brighter effect */
+    overflow-y: auto; /* Allows vertical scrolling */
+    max-height: calc(100vh - 100px); /* Restricts the height to be within the viewport */
+}
