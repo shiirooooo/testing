@@ -324,3 +324,27 @@ downloadPdfButton.addEventListener("click", function () {
     // Menyimpan PDF dengan nama 'water_tank_data.pdf'
     doc.save("water_tank_data.pdf");
 });
+
+// Menambahkan tombol Refresh Table
+const refreshTableButton = document.createElement("button");
+refreshTableButton.textContent = " Refresh Data Table";
+
+// Menambahkan ikon di sebelah tulisan menggunakan Font Awesome
+const refreshIcon = document.createElement("i");
+refreshIcon.classList.add("fas", "fa-sync-alt"); // Menambahkan kelas Font Awesome untuk ikon Refresh
+refreshIcon.style.marginRight = "8px"; // Memberikan jarak antara ikon dan tulisan
+
+refreshTableButton.classList.add("btn", "btn-secondary"); // Menggunakan warna abu-abu dengan btn-secondary
+refreshTableButton.style.marginTop = "20px"; // Pastikan margin atas sama dengan tombol Save as PDF
+refreshTableButton.style.marginLeft = "10px"; // Tambahkan jarak horizontal untuk memisahkan dengan tombol Save as PDF
+
+// Menambahkan ikon dan teks ke dalam tombol
+refreshTableButton.prepend(refreshIcon);
+
+// Menambahkan tombol setelah tombol Download PDF
+tableContainer.appendChild(refreshTableButton);
+
+// Event listener untuk tombol Refresh Table
+refreshTableButton.addEventListener("click", function () {
+    updateTable(); // Memanggil fungsi untuk merefresh data tabel
+});

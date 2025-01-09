@@ -1,5 +1,5 @@
 <?php
-    $title = "SOUTHSIDE";
+    $title = "IOT MONITORING";
     $welcomeMessage = "Selamat datang!";
     $tagline = "PROJECT IOT - WATER TANK MONITORING";
 ?>
